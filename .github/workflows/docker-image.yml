@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.AZURE_ACR_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build . -t ${{ secrets.AZURE_ACR_LOGIN_SERVER }}/miapp-web:latest
+        run: docker build . -t ${{ secrets.AZURE_ACR_LOGIN_SERVER }}/azure-test:latest
 
       - name: Push Docker image
-        run: docker push ${{ secrets.AZURE_ACR_LOGIN_SERVER }}/miapp-web:latest
+        run: docker push ${{ secrets.AZURE_ACR_LOGIN_SERVER }}/azure-test:latest
